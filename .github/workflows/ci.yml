@@ -1,0 +1,32 @@
+name: CI for Reminder
+
+# Controls when the action will run.
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Sets up Node.js environment with the latest LTS version
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 'lts/*'
+
+    # Installs npm dependencies
+    - name: Install dependencies
+      run: npm install
+
+    # Runs your app.js file
+    - name: Run app.js
+      run: node app.js
