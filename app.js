@@ -20,4 +20,4 @@ const remainingMinutes = totalMinutes - (totalHours * 60);
 const remainingSeconds = totalSeconds - (totalMinutes * 60);
 
 
-console.log(`There are ${totalMonths} months, ${remainingDays} days, ${remainingHours} hours, ${remainingMinutes} minutes, and ${remainingSeconds} seconds remaining until the next year.`);
+console.log(`Reminder : There are ${totalMonths} months, ${remainingDays} days, ${remainingHours} hours, ${remainingMinutes} minutes, and ${remainingSeconds} seconds remaining until the next year.`);
